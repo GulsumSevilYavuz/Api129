@@ -40,7 +40,7 @@ Response response=given(spec).accept(ContentType.JSON).get("{first}");
 //Do Assertion  § body sorgusu var ondan dolayi 3 kez yazdik  bu bi list her elemandan 200 kez gelir
         response.then().statusCode(200).contentType(ContentType.JSON).body("title", hasSize(201))
                 .body("title",hasItem("quis eius est sint explicabo")) //<= hasItem contains demek
-                .body("userId",hasItems(2,7,9)) ;
+                .body("userId",hasItems(2,7,9));
 //body("",hasSize(200))  ilk parametreyi bos birakirsam hepsi birden gelir list olarak
 //hasSize =>eleman sayisini assert eder
 //hasItem =>contains methodu gibi bir objenin icerilip icerilmedigini kontrol eder

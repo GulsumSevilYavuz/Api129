@@ -40,7 +40,8 @@ public class Get11 extends HerOkuAppBaseUrl {
 
         //Set the expected data
         BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2018-01-01", "2019-01-01");
-        BookingPojo expectedData = new BookingPojo("John", "Smith", 111, true, bookingDatesPojo, "Breakfast");
+        BookingPojo expectedData = new BookingPojo("John", "Smith", 111, true,
+                bookingDatesPojo, "Breakfast");
         System.out.println("expectedData = " + expectedData);
 
         //Send the request and get the response

@@ -10,7 +10,8 @@ import org.junit.runners.Suite;
           C02_GetRequest.class,
           C03_PutRequest.class,
           C04_PatchRequest.class,
-          C05_DeleteRequest.class
+          C05_DeleteRequest.class,
+           C06_GetRequest_Negative.class
         }
 
 )

@@ -64,6 +64,7 @@ public class Get06 extends HerOkuAppBaseUrl {
         JsonPath jsonPath = response.jsonPath();//jsonPath() methodu ile response'ı jsonPath objesine çevirdik.
 
         //jsonPath objesi ile dataya spesifik olarak ulaşabiliriz:
+
         assertEquals("firstname uyuşmadı","Josh", jsonPath.getString("firstname"));
         assertEquals("Allen", jsonPath.getString("lastname"));
         assertEquals(111, jsonPath.getInt("totalprice"));
@@ -80,6 +81,7 @@ public class Get06 extends HerOkuAppBaseUrl {
         SoftAssert softAssert = new SoftAssert();
 
 //2. Assertion yap
+
         softAssert.assertEquals(jsonPath.getString("firstname"),"Josh","firstname uyuşmadı");
         softAssert.assertEquals(jsonPath.getString("lastname"),"Allen","lastname uyuşmadı");
         softAssert.assertEquals(jsonPath.getInt("totalprice"),111,"totalprice uyuşmadı");

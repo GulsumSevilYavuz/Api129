@@ -13,6 +13,7 @@ private String checkout;
     }
 
     public String getCheckin() {
+
         return checkin;
     }
 

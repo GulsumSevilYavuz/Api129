@@ -5,6 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 import utils.AuthenticationHerOkuApp;
+
+import static utils.AuthenticationHerOkuApp.generateToken;
 /*
         Given
             https://restful-booker.herokuapp.com/booking
@@ -25,7 +27,7 @@ public class HerOkuAppBaseUrl {//jsonin ustunde kopy paste yaptik kopy yapinca i
 public void setup() {//Before methodu calismazsa spec null olur exception atar ondan önce before calisacak sonra atama olacak
 
         spec = new RequestSpecBuilder()
-                .addHeader("Cookie", "token="+ AuthenticationHerOkuApp.generateToken())
+                .addHeader("Cookie", "token="+ generateToken())
                 .setContentType(ContentType.JSON)
                 .setBaseUri("https://restful-booker.herokuapp.com/")
                 .build();
